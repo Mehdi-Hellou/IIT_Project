@@ -5,6 +5,7 @@ from lbph import LocalBinaryPatterns
 from sklearn.svm import LinearSVC
 import numpy as np
 from sklearn.model_selection import train_test_split
+from sklearn.ensemble import AdaBoostClassifier
 
 desc = LocalBinaryPatterns(24, 8)
 
@@ -36,3 +37,8 @@ accuracy = [1 if y_predict[i]==y_test[i] else 0 for i in range(0,len(X_test)) ]
 
 print(accuracy)
 print(sum(accuracy)/len(accuracy))
+
+clf = AdaBoostClassifier(n_estimators=100, random_state=0)
+clf.fit(X_train,y_train)
+
+print(clf.score(X_test, y_test))
