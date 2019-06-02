@@ -16,6 +16,3 @@ for the accuracy of the model and the  boundaries decision.
 
 python script which choose 10 randomly images in the test dataset and print the prediction of the model onto the image.
 
-# finalized_model.sav 
-
-The final SVM model with the optimum parameters.
