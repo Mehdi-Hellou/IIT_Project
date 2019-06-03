@@ -22,7 +22,7 @@ if __name__ == "__main__":
     test_path_images =  [i for i in paths.list_images("images/test")] #list of the path to test images   
     train_path_images = [i for i in paths.list_images("images/train")] #list of the path to train images
     
-    test_images = random.choices(test_path_images, k=10)
+    test_images = random.sample(test_path_images, 10)
     
     model = pickle.load(open("finalized_model.sav", 'rb'))   # We load our classifier
     
